@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kontroleri.Lijek.LijekoviKontroler">
+    <children>
+        <BorderPane layoutX="388.0" layoutY="229.0" prefHeight="654.0" prefWidth="1038.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <ScrollPane fx:id="scrollPan" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                    <content>
+                        <FlowPane fx:id="flowPane" hgap="10.0" prefHeight="414.0" prefWidth="938.0" vgap="10.0">
+                            <padding>
+                                <Insets left="13.0" top="13.0" />
+                            </padding>
+                     <children>
+                        <TableView fx:id="drugTable2" prefHeight="475.0" prefWidth="1021.0">
+                          <columns>
+                            <TableColumn fx:id="drugId" prefWidth="250.0" text="#" />
+                            <TableColumn fx:id="drugName" prefWidth="250.0" text="Naziv lijeka" />
+                              <TableColumn fx:id="genericDrugName" prefWidth="250.0" text="Generički naziv lijeka" />
+                              <TableColumn fx:id="drugNotes" prefWidth="270.0" text="Opažanja" />
+                          </columns>
+                        </TableView>
+                     </children>
+                        </FlowPane>
+                    </content>
+                </ScrollPane>
+            </center>
+            <top>
+                <BorderPane prefHeight="56.0" prefWidth="960.0" BorderPane.alignment="CENTER">
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="291.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#refreshDrugs" prefHeight="41.0" prefWidth="133.0" style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 15px;" text="Osvježi tabelu" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                        <Button fx:id="addNewDrug" layoutX="191.0" layoutY="18.0" mnemonicParsing="false" onAction="#addNewDrug" prefHeight="41.0" prefWidth="133.0" style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 15px;" text="Dodaj Lijek" textFill="WHITE" />
+                            </children>
+                        </HBox>
+                    </right>
+                    <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </top>
+            <bottom>
+                <BorderPane prefHeight="42.0" prefWidth="976.0" BorderPane.alignment="CENTER">
+                    <bottom>
+                        <AnchorPane prefHeight="104.0" prefWidth="976.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label fx:id="ukupnoLijekova" layoutX="396.0" layoutY="45.0" prefHeight="18.0" prefWidth="68.0" style="-fx-font-size: 14px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Ukupno : 0" />
+                            </children>
+                        </AnchorPane>
+                    </bottom>
+                </BorderPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="657.0" prefWidth="1044.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Kontroleri.PrepisaniLijekoviKontroler">
+    <children>
+        <BorderPane layoutX="422.0" layoutY="229.0" prefHeight="657.0" prefWidth="1044.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <BorderPane prefHeight="65.0" prefWidth="1044.0" BorderPane.alignment="CENTER">
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="246.0"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="noviRecept" mnemonicParsing="false" prefHeight="49.0" prefWidth="176.0"
+                                        style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                        text="Napravi Novi Recept" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets right="10.0"/>
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </right>
+                    <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <TextField fx:id="pretraga" prefHeight="31.0" prefWidth="484.0"
+                                           promptText="Pretrazi Pacijente"
+                                           style="-fx-background-color: transparent; -fx-border-width: 0px 0px 1.5px 0px; -fx-border-color: #2388C6;"/>
+                                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0"
+                                        style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 13px;"
+                                        text="Pretraga" textFill="WHITE"/>
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+            </top>
+            <center>
+                <TableView fx:id="prescriptionTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="brojPacijenta" maxWidth="1200.0" prefWidth="500.0"
+                                     style="-fx-background-color: transparent; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;"
+                                     text="#"/>
+                        <TableColumn fx:id="imePacijenta" prefWidth="260.0" sortable="false"
+                                     style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-background-color: transparent;"
+                                     text="Pacijent"/>
+                        <TableColumn fx:id="datumRecepta" prefWidth="72.0"
+                                     style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-background-color: transparent;"
+                                     text="Datum Recepta"/>
+                        <TableColumn fx:id="glavnaZalba" prefWidth="216.0"
+                                     style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-background-color: transparent;"
+                                     text="Glavna Smetnja"/>
+                        <TableColumn fx:id="medikacija" maxWidth="3000.0" prefWidth="150.0"
+                                     style="-fx-background-color: transparent; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;"
+                                     text="Medikacija"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </center>
+            <bottom>
+                <BorderPane prefHeight="43.0" prefWidth="1044.0" BorderPane.alignment="CENTER">
+                    <left>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0"
+                                        style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-background-color: transparent; -fx-background-color: #2388C6;"
+                                        text="&lt; Prethodno" textFill="WHITE"/>
+                            </children>
+                        </HBox>
+                    </left>
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0"
+                                        style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;"
+                                        text="Sljedeca &gt;" textFill="WHITE"/>
+                            </children>
+                        </HBox>
+                    </right>
+                    <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Label fx:id="total"
+                                       style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px;"
+                                       text="Ukupno : 0"/>
+                                <Label fx:id="trenutniPrikaz"
+                                       style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px;"
+                                       text="Prikaz  0 do 10 rezultata"/>
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+            </bottom>
+        </BorderPane>
+        <ScrollBar layoutX="1032.0" layoutY="86.0" orientation="VERTICAL" prefHeight="525.0" prefWidth="19.0"
+                   style="-fx-background-color: transparent;"/>
+    </children>
+</AnchorPane>

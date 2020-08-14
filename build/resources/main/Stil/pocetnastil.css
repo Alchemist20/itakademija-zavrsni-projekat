@@ -1,0 +1,101 @@
+.root {
+    -fx-background-color: #10263E;
+}
+
+.sidebar-sekcija {
+    -fx-background-color: #10263E;
+
+}
+
+.sidebar .button {
+    -fx-background-color: none;
+    -fx-text-fill: #81C2E7;
+    -fx-font-weight: 700;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Trebuchet MS', Helvetica, sans-serif;;
+    -fx-border-width: 0px 0px 0px 7px;
+}
+
+.sidebar .button:hover {
+    -fx-border-color: #81C2E7;
+    -fx-border-width: 0px 0px 0px 7px;
+    -fx-border-radius: 0px;
+    -fx-text-fill: #81C2E7;
+}
+
+#home {
+    -fx-background-image: url("/Ikone/homeikonasiva.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 55% 30%;
+}
+
+#home:hover {
+    -fx-background-image: url("/Ikone/homeikonaplava.png");
+}
+
+.home-active {
+    -fx-background-image: url("/Ikone/homeikonaplava.png");
+}
+
+#recept {
+    -fx-background-image: url("/Ikone/receptsivi.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 55% 30%;
+}
+
+#recept:hover {
+    -fx-background-image: url("/Ikone/receptplavi.png");
+}
+
+.recept-active {
+    -fx-background-image: url("/Ikone/receptplavi.png");
+}
+
+#pacijent {
+    -fx-background-image: url("/Ikone/pacijentisivi.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 55% 30%;
+}
+
+#pacijent:hover {
+    -fx-background-image: url("/Ikone/pacijentiplavi.png");
+}
+
+.pacijent-active {
+    -fx-background-image: url("/Ikone/pacijentiplavi.png");
+}
+
+#lijek {
+    -fx-background-image: url("/Ikone/lijeksivi.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 55% 30%;
+}
+
+#lijek:hover {
+    -fx-background-image: url("/Ikone/lijekplavi.png");
+}
+
+.lijek-active {
+    -fx-background-image: url("/Ikone/lijekplavi.png");
+}
+
+
+#podesavanja {
+    -fx-background-image: url("/Ikone/podesavanjasiva.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 55% 30%;
+}
+
+#podesavanja:hover {
+    -fx-background-image: url("/Ikone/podesavanjaplava.png");
+}
+
+.podesavanja-active {
+    -fx-background-image: url("/Ikone/podesavanjaplava.png");
+}
+

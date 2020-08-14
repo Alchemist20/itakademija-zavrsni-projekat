@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="1178.0" style="-fx-background-color: #10263E;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kontroleri.PocetnaSadrzajKontroler">
+    <children>
+        <BorderPane layoutX="347.0" layoutY="181.0" prefHeight="588.0" prefWidth="893.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER" prefHeight="76.0" prefWidth="893.0" BorderPane.alignment="CENTER" />
+            </top>
+            <bottom>
+                <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="893.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="Status " />
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <FlowPane hgap="10.0" prefHeight="512.0" prefWidth="1224.0" vgap="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane prefHeight="251.0" prefWidth="368.0">
+                            <children>
+                                <BorderPane layoutX="70.0" layoutY="26.0" prefHeight="251.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="32.0" prefWidth="287.0" style="-fx-font-size: 22px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Ukupno Pacijenata" textFill="WHITE" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <center>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Text fx:id="totalPatients" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="0">
+                                                    <font>
+                                                        <Font size="96.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                    </center>
+                                    <bottom>
+                                        <StackPane prefHeight="51.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="btnPatient" defaultButton="true" mnemonicParsing="false" onAction="#dodajPacijenta" prefHeight="50.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Dodaj novog pacijenta" textFill="WHITE" />
+                                            </children>
+                                        </StackPane>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="251.0" prefWidth="368.0">
+                            <children>
+                                <BorderPane layoutX="70.0" layoutY="26.0" prefHeight="251.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="241.0" style="-fx-font-size: 22px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Ukupno Lijekova" textFill="WHITE" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <center>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Text fx:id="totalMedicine" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="0">
+                                                    <font>
+                                                        <Font size="96.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                    </center>
+                                    <bottom>
+                                        <StackPane prefHeight="51.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="btnDrug" defaultButton="true" mnemonicParsing="false" onAction="#dodajLijek" prefHeight="50.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Dodaj novi lijek" textFill="WHITE" />
+                                            </children>
+                                        </StackPane>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="378.0" layoutY="10.0" prefHeight="251.0" prefWidth="368.0">
+                            <children>
+                                <BorderPane layoutX="70.0" layoutY="26.0" prefHeight="251.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label style="-fx-font-size: 22px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Ukupno Recepata" textFill="WHITE" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <center>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Text fx:id="totalPrescriptions" fill="#fff9f9" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="0">
+                                                    <font>
+                                                        <Font size="89.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                    </center>
+                                    <bottom>
+                                        <StackPane prefHeight="51.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="btnPrescription" defaultButton="true" mnemonicParsing="false" onAction="#napraviRecept" prefHeight="50.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Napiši novi recept" textFill="WHITE" />
+                                            </children>
+                                        </StackPane>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="261.0" prefHeight="251.0" prefWidth="368.0">
+                            <children>
+                                <BorderPane layoutX="70.0" layoutY="26.0" prefHeight="251.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label style="-fx-font-size: 22px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="Ukupno obrazaca" textFill="WHITE" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <center>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Text fx:id="totalPrescriptionTemplates" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" text="0">
+                                                    <font>
+                                                        <Font size="96.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                    </center>
+                                    <bottom>
+                                        <StackPane prefHeight="51.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="btnTemplate" defaultButton="true" mnemonicParsing="false" onAction="#napraviNoviObrazac" prefHeight="50.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;" stylesheets="@../Stil/pocetnasadrzaj.css" text="Napravi novi obrazac za recept" textFill="WHITE" />
+                                            </children>
+                                        </StackPane>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="378.0" layoutY="261.0" prefHeight="251.0" prefWidth="368.0" visible="false">
+                            <children>
+                                <BorderPane layoutX="70.0" layoutY="26.0" prefHeight="251.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label text="Total Patient" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <center>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                            </children>
+                                        </HBox>
+                                    </center>
+                                    <bottom>
+                                        <StackPane prefHeight="51.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button defaultButton="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="368.0" style="-fx-font-size: 22px;" text="Add new patient" />
+                                            </children>
+                                        </StackPane>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="15.0" />
+                    </BorderPane.margin>
+                </FlowPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

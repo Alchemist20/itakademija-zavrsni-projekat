@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="654.0" prefWidth="1052.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Kontroleri.PodesavanjaKontroler">
+    <children>
+        <BorderPane layoutX="322.0" layoutY="200.0" prefHeight="600.0" prefWidth="844.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="844.0" BorderPane.alignment="CENTER"/>
+            </top>
+            <center>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="583.0" prefWidth="474.0">
+                            <children>
+                                <AnchorPane prefHeight="607.0" prefWidth="474.0">
+                                    <children>
+                                        <Label layoutX="135.0" layoutY="14.0"
+                                               style="-fx-font-size: 24px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif;"
+                                               text="Ažurirajte vaš profil"/>
+                                        <TextField fx:id="fullName3" layoutX="164.0" layoutY="84.0" prefHeight="25.0"
+                                                   prefWidth="206.0" promptText="unesi ime i prezime"
+                                                   style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px; -fx-text-fill: #000000;"/>
+                                        <TextField fx:id="username3" layoutX="164.0" layoutY="158.0" prefHeight="25.0"
+                                                   prefWidth="206.0" promptText="unesi korisničko ime"
+                                                   style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px; -fx-text-fill: #000000;"/>
+                                        <TextField fx:id="email3" layoutX="164.0" layoutY="234.0" prefHeight="25.0"
+                                                   prefWidth="206.0" promptText="unesi email"
+                                                   style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px; -fx-text-fill: #000000;"/>
+                                        <PasswordField fx:id="oldPass3" layoutX="164.0" layoutY="309.0"
+                                                       prefHeight="25.0" prefWidth="206.0"
+                                                       promptText="unesi staru šifru"
+                                                       style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px;"/>
+                                        <PasswordField fx:id="newPass3" layoutX="164.0" layoutY="386.0"
+                                                       prefHeight="25.0" prefWidth="206.0" promptText="unesi novu šifru"
+                                                       style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px;"/>
+                                        <PasswordField fx:id="reNewPass3" layoutX="164.0" layoutY="453.0"
+                                                       prefHeight="32.0" prefWidth="206.0"
+                                                       promptText="ponovo unesi novu šifru"
+                                                       style="-fx-background-color: transparent; -fx-border-color: #2388C6; -fx-border-width: 0px 0px 1.5px 0px; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 12px;"/>
+                                        <Label layoutX="57.0" layoutY="89.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Ime i prezime"/>
+                                        <Label layoutX="55.0" layoutY="163.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Korisničko Ime"/>
+                                        <Label layoutX="107.0" layoutY="239.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Email"/>
+                                        <Label layoutX="82.0" layoutY="314.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Stara šifra"/>
+                                        <Label layoutX="83.0" layoutY="391.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Nova šifra"/>
+                                        <Button layoutX="212.0" layoutY="523.0" mnemonicParsing="false"
+                                                onAction="#handleProfileChange" prefHeight="33.0" prefWidth="110.0"
+                                                style="-fx-background-color: transparent; -fx-background-color: #2388C6; -fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                                text="Potvrdi" textFill="WHITE"/>
+                                        <Label layoutY="461.0"
+                                               style="-fx-font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; -fx-font-size: 14px;"
+                                               text="Ponovo unesi novu šifru"/>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
